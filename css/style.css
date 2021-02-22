@@ -1,0 +1,160 @@
+/**Google font link**/
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Lato", sans-serif;
+  }
+.position{
+    position: relative;
+}
+.music-player-box {
+    background: linear-gradient(45deg, #00000082,#103ad49c),url(../img/bg2.jpg);
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 550px;
+    z-index: 999;
+    margin-left: 65px;
+}
+.music-thumb img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 10px solid #dc3545;
+    margin-bottom: 10px;
+}
+.music-timer {
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+}
+#prev,#play,#next{
+    cursor: pointer;
+    margin: 0 25px;
+    background: white;
+    box-shadow: 0px 4px 9px grey;
+    padding: 13px;
+    border-radius: 100px;
+    color: black;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    vertical-align: middle;
+}
+#vol-plus,#vol-icon,#vol-minus,#details-icon{
+    cursor: pointer;
+    margin: 0 11px;
+    background: white;
+    box-shadow: 0px 4px 9px grey;
+    color: black;
+    padding: 13px;
+    font-weight: 600;
+    border-radius: 100px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+input#file:before {
+    content: '\21D6';
+    color: white;
+    font-size: 27px;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span:hover {
+    background: #132b82 !important;
+    color: white !important;
+}
+.song-title{
+    padding: 11px 10px;
+    height: 63px;
+}
+
+#file::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+input#file {
+    color: transparent;
+    margin-left: 6px;
+    margin-right: 8px;
+    box-shadow: 0px 4px 9px grey;
+    padding: 4px;
+    height: 48px;
+    border-radius: 100%;
+    width: 48px;
+    outline: none;
+}
+input#file:hover {
+    background: #132b82 !important;
+}
+p {
+    color: black;
+    position: absolute;
+    left: -15px;
+    bottom: -41px;
+}
+
+.player-control {
+    background: white;
+    padding: 25px;
+    border-radius: 100% 100% 0 0;
+    height: 200px;
+    box-shadow: 0px 4px 9px grey;
+
+}
+
+.control {
+    margin-top: 25px;
+}
+.volume{
+    position: relative;
+}
+div#song-info {
+    background: white;
+    padding: 20px;
+    width: 350px;
+    transition: all 0.5s ease;
+    height: 550px;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    top: 48px;
+    visibility: hidden;
+}
+.show {
+    transform: translateX(455px);
+    visibility: visible !important;
+    /* transition: all 0.5s ease; */
+
+}
+td{
+    border: 1px solid gray !important;
+    padding: 5px;
+}
+.img{
+    animation: rotate 4s linear infinite;
+    -webkit-animation: rotate 4s linear infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+}
+100%{
+    transform: rotate(360deg);
+}
+
+}

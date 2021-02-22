@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Music-Player | JavaScript</title>
+    <!--custom css link-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!--Font awesome-->
+    <script
+      src="https://kit.fontawesome.com/686509c997.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-light">
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 position">
+            <div class="music-player-box mt-5 bg-white shadow rounded mb-2">
+              <div class="player-box">
+                <div class="song-title">
+                  <marquee behavior="smooth" class="text-white"
+                    ><h4 id="song-title"></h4
+                  ></marquee>
+                </div>
+                <div class="music-thumb text-center mt-2">
+                  <img src="./img/thmb.jpg" class="img-fluid" />
+                </div>
+                <audio id="audio" autoplay></audio>
+                <div class="music-timer text-center text-white">
+                  <strong id="currentTime">00:00</strong>&nbsp;/&nbsp;<strong id="full-time">00:00</strong>
+                  <div class="progress mt-2">
+                    <div
+                      class="progress-bar"
+                      id="progress-bar"
+                      role="progressbar"
+                    ></div>
+                  </div>
+                </div>
+                <div class="player-control mt-1 text-white">
+                  <div
+                    class="control d-flex align-items-center justify-content-center"
+                  >
+                    <span id="prev"><i class="fas fa-backward"></i> </span>
+                    <span id="play"><i class="fas fa-play"></i> </span>
+                    <span id="next"><i class="fas fa-forward"></i> </span>
+                  </div>
+                  <div
+                    class="volume mt-4 d-flex align-items-center justify-content-center"
+                  >
+                    <input type="file" title="Upload A Song" id="file" class="bg-danger text-white" multiple/><br>
+                    <p>Upload Song</p>
+                    <span id="vol-plus">+</span>
+                    <span id="vol-icon"><i class="fas fa-volume-up"></i></span>
+                    <span id="vol-minus">-</span>
+                    <span id="details-icon" class="bg-danger text-white"><i class="fas fa-bars"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="song-info" class="bg-white shadow rounded mb-2">
+              <h2 class="text-center">Song Details</h2>
+              <table>
+                <tr>
+                  <td>Name:</td>
+                  <td><span id="name"></span></td>
+                </tr>
+                <tr>
+                  <td>Duration:</td>
+                  <td><span id="time"></span></td>
+                </tr>
+                <tr>
+                  <td>Size:</td>
+                  <td><span id="size"></span></td>
+                </tr>
+                <tr>
+                  <td>Modified Date:</td>
+                  <td><span id="date"></span></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--custom js link-->
+    <script src="js/script.js"></script>
+    <!--bootstrap js link-->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
