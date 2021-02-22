@@ -95,16 +95,12 @@ function handleAudio(e) {
     playSong.innerHTML = '<i class="fas fa-pause"></i>';
   });
   // volume up
-  volIncrease.addEventListener('click',()=>{
-    if(audio.volume < 1){
-      audio.volume += 0.1
-    }
+  volIncrease.addEventListener('click',(e)=>{
+    audio.volume += 0.1
   })
   // volume down
-  volDecrease.addEventListener('click',()=>{
-    if(audio.volume > 1){
-      audio.volume -= 0.1
-    }
+  volDecrease.addEventListener('click',(e)=>{ 
+    audio.volume -= 0.1
   })
 
 }
